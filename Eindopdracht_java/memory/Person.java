@@ -7,6 +7,7 @@
  *
  * @author arjend
  */
+package memory;
 
 
 public final class Person {
@@ -19,6 +20,12 @@ public final class Person {
         this.setPersonID(pid);
     }
 
+    public Person(String pid,char gender) {
+        this.setPersonID(pid);
+        this.setGender(gender);
+    }
+
+
     public Person(String pid, String dateOfBirth, char gender) {
         this.setPersonID(pid);
         this.setDateOfBirth(dateOfBirth);
@@ -28,7 +35,7 @@ public final class Person {
     public void setPersonID(String id) {
         this.personId = id;
     }
-    
+
     public String getPersonID(){
         return this.personId;
     }
