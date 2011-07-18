@@ -2,10 +2,12 @@
  *
  * @author arjend
  */
+package memory;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
 
 public class StartTest extends JFrame 
     implements ActionListener {
@@ -32,7 +34,7 @@ public class StartTest extends JFrame
     }
 
     public void actionPerformed(ActionEvent event) {
-        this.createperson  = new CreatePersonGui(this, "TEST");
+        this.createperson  = new CreatePersonGui(this, "Add Person");
         this.createperson.setVisible(true);
     }
 }

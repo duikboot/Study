@@ -2,6 +2,7 @@
  *
  * @author arjend
  */
+package memory;
 
 public abstract class Test {
 
