@@ -8,12 +8,17 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import layout.*;
+
+
 public class CreatePersonGui extends JDialog
     implements ActionListener {
 
     private JTextField id, date_of_birth;
     private JComboBox gender;
-    private JLabel lbl_id, lbl_date_of_birth, lbl_gender;
+    //private JLabel lbl_id, lbl_date_of_birth, lbl_gender;
+    final String[] labels = {"Ppnr: ", "Gender: ", "Date of birth: "};
+    final int numPairs = labels.length;
     private JButton btn_submit, btn_cancel;
     private Person person;
     private StartTest frame;
@@ -28,36 +33,51 @@ public class CreatePersonGui extends JDialog
 
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         Container window = getContentPane();
-        window.setLayout(new FlowLayout());
+        SpringLayout layout = new SpringLayout();
+        window.setLayout(layout);
+        //Create and populate the panel.
+        //JPanel p = new JPanel(new SpringLayout());
+        for (int i = 0; i < numPairs; i++) {
+            JLabel l = new JLabel(labels[i], JLabel.TRAILING);
+            window.add(l);
+            JTextField textField = new JTextField(10);
+            l.setLabelFor(textField);
+            window.add(textField);
+        }
 
-        lbl_id = new JLabel("Proefpersoonnummer: ");
-        window.add(lbl_id);
+        //Lay out the panel.
+        SpringUtilities.makeCompactGrid(window,
+                                        numPairs, 2, //rows, cols
+                                        6, 6,        //initX, initY
+                                        6, 6);       //xPad, yPad
+        //lbl_id = new JLabel("Proefpersoonnummer: ");
+        //window.add(lbl_id);
 
-        id= new JTextField(10);
-        window.add(id);
+        //id= new JTextField(10);
+        //window.add(id);
 
-        lbl_date_of_birth = new JLabel("Date of birth: ");
-        window.add(lbl_date_of_birth);
+        //lbl_date_of_birth = new JLabel("Date of birth: ");
+        //window.add(lbl_date_of_birth);
 
-        date_of_birth= new JTextField(8);
-        window.add(date_of_birth);
+        //date_of_birth= new JTextField(8);
+        //window.add(date_of_birth);
 
-        lbl_gender = new JLabel("Gender: ");
-        window.add(lbl_gender);
+        //lbl_gender = new JLabel("Gender: ");
+        //window.add(lbl_gender);
 
-        gender = new JComboBox();
-        gender.addItem("Male");
-        gender.addItem("Female");
-        window.add(gender);
+        //gender = new JComboBox();
+        //gender.addItem("Male");
+        //gender.addItem("Female");
+        //window.add(gender);
 
 
-        btn_submit = new JButton("Submit");
-        window.add(btn_submit);
-        btn_submit.addActionListener(this);
+        //btn_submit = new JButton("Submit");
+        //window.add(btn_submit);
+        //btn_submit.addActionListener(this);
 
-        btn_cancel = new JButton("Cancel");
-        window.add(btn_cancel);
-        btn_cancel.addActionListener(this);
+        //btn_cancel = new JButton("Cancel");
+        //window.add(btn_cancel);
+        //btn_cancel.addActionListener(this);
 
     }
 
