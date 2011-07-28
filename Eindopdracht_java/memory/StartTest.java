@@ -8,33 +8,31 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
-public class StartTest extends JFrame 
+public class StartTest extends JDialog
     implements ActionListener {
 
-    private JButton add_person_button;
-    private CreatePersonGui createperson;
+    private JButton btn_face, btn_number;
 
-    public static void main(String[] args) {
-        StartTest frame = new StartTest();
-        frame.setSize(400, 300);
-        frame.createGUI();
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
+    public StartTest(Start frame, String title){
+        super(frame, title);
+        this.setLocationRelativeTo(null);
+        this.setSize(170,250);
 
-    private void createGUI() {
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
 
-        add_person_button = new JButton("Add Person");
-        window.add(add_person_button);
-        add_person_button.addActionListener(this);
+        btn_face = new JButton("Face recognition");
+        window.add(btn_face);
+        btn_face.addActionListener(this);
+
+        btn_number = new JButton("Numbers test");
+        window.add(btn_number);
+        btn_face.addActionListener(this);
     }
 
-    public void actionPerformed(ActionEvent event) {
-        this.createperson  = new CreatePersonGui(this, "Add Person");
-        this.createperson.setVisible(true);
+    public void actionPerformed(ActionEvent event){
+
     }
 }
+
