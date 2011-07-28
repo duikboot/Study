@@ -7,13 +7,16 @@ package memory;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.util.ArrayList;
 
 
 public class Start extends JFrame
     implements ActionListener {
 
-    private JButton add_person_button;
+    private JButton btn_add_person, btn_start_test;
     private CreatePersonGui createperson;
+    private StartTest starttest;
+    private ArrayList<String[]> persons = new ArrayList<String[]>();
 
     public static void main(String[] args) {
         Start frame = new Start();
@@ -28,13 +31,25 @@ public class Start extends JFrame
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
 
-        add_person_button = new JButton("Add Person");
-        window.add(add_person_button);
-        add_person_button.addActionListener(this);
+        btn_start_test = new JButton("Start Test");
+        window.add(btn_start_test);
+        btn_start_test.addActionListener(this);
+
+        btn_add_person= new JButton("Add Person");
+        window.add(btn_add_person);
+        btn_add_person.addActionListener(this);
+
     }
 
     public void actionPerformed(ActionEvent event) {
-        this.createperson  = new CreatePersonGui(this, "Add Person");
-        this.createperson.setVisible(true);
+        final String command = event.getActionCommand();
+        if (command.equals("Add Person")){
+            this.createperson  = new CreatePersonGui(this, "Add Person");
+            this.createperson.setVisible(true);
+        }
+        else if (command.equals("Start Test")){
+            this.starttest = new StartTest(this, "Start Test");
+            this.starttest.setVisible(true);
+        }
     }
 }

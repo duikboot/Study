@@ -14,19 +14,20 @@ public final class Person {
 
     private String personId;
     private String dateOfBirth;
-    private char gender;
+    private String gender;
+    private String[] person = new String[3];
 
     public Person(String pid) {
         this.setPersonID(pid);
     }
 
-    public Person(String pid,char gender) {
+    public Person(String pid, String gender) {
         this.setPersonID(pid);
         this.setGender(gender);
     }
 
 
-    public Person(String pid, String dateOfBirth, char gender) {
+    public Person(String pid, String dateOfBirth, String gender) {
         this.setPersonID(pid);
         this.setDateOfBirth(dateOfBirth);
         this.setGender(gender);
@@ -34,6 +35,7 @@ public final class Person {
 
     public void setPersonID(String id) {
         this.personId = id;
+        this.person[0] = this.personId;
     }
 
     public String getPersonID(){
@@ -42,6 +44,7 @@ public final class Person {
 
     public void setDateOfBirth(String date) {
         this.dateOfBirth = date;
+        this.person[1] = this.dateOfBirth;
 //        this.dateOfBirth.set(1978, 2, 26);
 
     }
@@ -50,13 +53,18 @@ public final class Person {
         return this.dateOfBirth;
     }
 
-    public void setGender(char gender) {
+    public void setGender(String gender) {
         this.gender = gender;
+        this.person[2] = this.gender;
     }
 
-    public char getGender() {
+    public String getGender() {
         return this.gender;
     }
 
+    public String[] getPersonArray(String id){
+        return this.person;
+
+    }
     //afnamedatum
 }
