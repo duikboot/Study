@@ -14,11 +14,10 @@ import layout.*;
 public class CreatePersonGui extends JDialog
     implements ActionListener {
 
+    public InformDisplay inform = new InformDisplay();
     private JTextField id, date_of_birth;
     private JComboBox gender;
     private JLabel lbl_id, lbl_date_of_birth, lbl_gender;
-    final String[] labels = {"Ppnr: ", "Gender: ", "Date of birth: "};
-    final int numPairs = labels.length;
     private JButton btn_submit, btn_cancel;
     private Person person;
     private Start frame;
@@ -36,21 +35,7 @@ public class CreatePersonGui extends JDialog
         //SpringLayout layout = new SpringLayout();
         //window.setLayout(layout);
         window.setLayout(new FlowLayout());
-        //Create and populate the panel.
-        //JPanel p = new JPanel(new SpringLayout());
-        // for (int i = 0; i < numPairs; i++) {
-        //     JLabel l = new JLabel(labels[i], JLabel.TRAILING);
-        //     window.add(l);
-        //     JTextField textField = new JTextField(10);
-        //     l.setLabelFor(textField);
-        //     window.add(textField);
-        // }
 
-        //Lay out the panel.
-        // SpringUtilities.makeCompactGrid(window,
-        //                                 numPairs, 2, //rows, cols
-        //                                 6, 6,        //initX, initY
-        //                                 2, 6);       //xPad, yPad
         lbl_id = new JLabel("Proefpersoonnr: ");
         window.add(lbl_id);
 
