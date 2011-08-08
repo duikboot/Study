@@ -15,6 +15,7 @@ public final class Person {
     private String personId;
     private String dateOfBirth;
     private String gender;
+    // Put everything in an array to 
     private String[] person = new String[3];
 
     public Person(String pid) {
@@ -22,6 +23,7 @@ public final class Person {
     }
 
     public Person(String pid, String gender) {
+        // Id and gender is the minimum.
         this.setPersonID(pid);
         this.setGender(gender);
     }
@@ -45,7 +47,8 @@ public final class Person {
     public void setDateOfBirth(String date) {
         this.dateOfBirth = date;
         this.person[1] = this.dateOfBirth;
-//        this.dateOfBirth.set(1978, 2, 26);
+        // TODO: make it a real date in stead of a String
+        // but it's not nessecary
 
     }
 

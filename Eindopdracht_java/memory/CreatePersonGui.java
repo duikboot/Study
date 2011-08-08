@@ -14,7 +14,6 @@ import layout.*;
 public class CreatePersonGui extends JDialog
     implements ActionListener {
 
-    public InformDisplay inform = new InformDisplay();
     private JTextField id, date_of_birth;
     private JComboBox gender;
     private JLabel lbl_id, lbl_date_of_birth, lbl_gender;
@@ -74,14 +73,15 @@ public class CreatePersonGui extends JDialog
      */
     public void actionPerformed(final ActionEvent event) {
         final String command = event.getActionCommand();
-        System.out.println(command);
         // if (command.equals("helpButton")) {
         //     // display help information
         // }
+        String id_, date_, gender_;
         if (command.equals("Submit")) {
-            this.person = new Person("123", "dateOfBirth", "M");
-            System.out.println(this.person.getDateOfBirth());
-            //createTestPerson("123", "sadf", 'M');
+            id_ = id.getText();
+            date_ = date_of_birth.getText();
+            gender_ = (String)gender.getSelectedItem();
+            this.person = new Person(id_, date_, gender_);
             this.cancelled = false;
             setVisible(false);
         }
