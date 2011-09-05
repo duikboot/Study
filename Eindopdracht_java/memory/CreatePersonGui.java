@@ -8,7 +8,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import layout.*;
 
 
 public class CreatePersonGui extends JDialog
@@ -71,6 +70,7 @@ public class CreatePersonGui extends JDialog
      *
      * @param event  the event.
      */
+    @Override
     public void actionPerformed(final ActionEvent event) {
         final String command = event.getActionCommand();
         // if (command.equals("helpButton")) {
@@ -93,7 +93,7 @@ public class CreatePersonGui extends JDialog
 
     /**
      * Returns a flag that indicates whether or not the dialog has been
-     * cancelled.
+     * canceled.
      *
      * @return boolean.
      */

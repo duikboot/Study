@@ -48,8 +48,7 @@ public final class Person {
         this.dateOfBirth = date;
         this.person[1] = this.dateOfBirth;
         // TODO: make it a real date in stead of a String
-        // but it's not nessecary
-
+        // but it's not nessecary. 
     }
 
     public String getDateOfBirth() {
@@ -65,9 +64,8 @@ public final class Person {
         return this.gender;
     }
 
-    public String[] getPersonArray(String id){
+    public String[] getPersonArray(){
         return this.person;
 
     }
-    //afnamedatum
 }

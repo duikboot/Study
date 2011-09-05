@@ -31,8 +31,9 @@ public class StartTest extends JDialog
         btn_face.addActionListener(this);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event){
-
+        final String command = event.getActionCommand();
     }
 }
 
