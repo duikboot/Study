@@ -100,5 +100,4 @@ public class CreatePersonGui extends JDialog
     public boolean isCancelled() {
         return this.cancelled;
     }
-
 }
