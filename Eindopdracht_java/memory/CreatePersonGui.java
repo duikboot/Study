@@ -9,7 +9,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 
-
 public class CreatePersonGui extends JDialog
     implements ActionListener {
 
