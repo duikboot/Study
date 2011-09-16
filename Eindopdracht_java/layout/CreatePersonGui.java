@@ -2,11 +2,13 @@
  *
  * @author arjend
  */
-package memory;
+package layout;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import memory.Person;
+import memory.Start;
 
 
 public class CreatePersonGui extends JDialog

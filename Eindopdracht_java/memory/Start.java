@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.ArrayList;
+import layout.CreatePersonGui;
 
 
 public class Start extends JFrame
