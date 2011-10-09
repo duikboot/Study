@@ -3,9 +3,10 @@
  * @author arjend
  */
 package memory;
+import interfaces.PathInterface;
 
 
-public abstract class Test {
+public abstract class Test implements PathInterface {
 
     public int pauseTime;
     public int displayTime;

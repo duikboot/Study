@@ -2,7 +2,7 @@
  *
  * @author arjend
  */
-package memory;
+package layout;
 
 import java.awt.*;
 import java.awt.event.*;

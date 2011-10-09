@@ -8,8 +8,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import memory.Person;
-import memory.Start;
-
 
 public class CreatePersonGui extends JDialog
     implements ActionListener {
@@ -72,7 +70,7 @@ public class CreatePersonGui extends JDialog
      * @param event  the event.
      */
     @Override
-    public void actionPerformed(final ActionEvent event) {
+    public void actionPerformed(ActionEvent event) {
         final String command = event.getActionCommand();
         // if (command.equals("helpButton")) {
         //     // display help information

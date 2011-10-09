@@ -4,10 +4,10 @@
  */
 package memory;
 
-import interfaces.PathInterface;
 
-public class FaceTest extends Test implements PathInterface{
+public class FaceTest extends Test{
     public String path;
+    @Override
     public String getPath() {
         return path;
     }
