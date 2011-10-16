@@ -41,7 +41,7 @@ public class Start extends JFrame
 
     }
 
-    @Override
+    //@Override
     public void actionPerformed(ActionEvent event) {
         final String command = event.getActionCommand();
         if (command.equals("Add Person")){

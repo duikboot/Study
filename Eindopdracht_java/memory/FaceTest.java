@@ -5,8 +5,8 @@
 package memory;
 
 
-public class FaceTest extends Test{
-    public String path;
+public class FaceTest extends PictureTest{
+    
     @Override
     public String getPath() {
         return path;

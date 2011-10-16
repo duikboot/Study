@@ -33,7 +33,7 @@ public class StartTest extends JFrame
         btn_face.addActionListener(this);
     }
 
-    @Override
+    //@Override
     public void actionPerformed(ActionEvent event){
         final String command = event.getActionCommand();
     }
