@@ -69,7 +69,6 @@ public class CreatePersonGui extends JDialog
      *
      * @param event  the event.
      */
-    //@Override
     public void actionPerformed(ActionEvent event) {
         final String command = event.getActionCommand();
         // if (command.equals("helpButton")) {
