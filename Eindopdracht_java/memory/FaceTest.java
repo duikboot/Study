@@ -7,7 +7,9 @@ package memory;
 
 public class FaceTest extends PictureTest{
 
+    public String imagepath = "faces";
+
     public String getPath() {
-        return path;
+        return this.path + "/" + this.imagepath;
     }
 }

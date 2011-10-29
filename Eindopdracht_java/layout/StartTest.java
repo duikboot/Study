@@ -8,10 +8,14 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import memory.PictureTest;
+import memory.FaceTest;
+
 public class StartTest extends JFrame
     implements ActionListener {
 
     private JButton btn_face, btn_number;
+    private PictureTest picturetest;
 
     public StartTest(Start frame, String title){
 
@@ -35,6 +39,10 @@ public class StartTest extends JFrame
 
     public void actionPerformed(ActionEvent event){
         final String command = event.getActionCommand();
+        if (command.equals("Face recognition")){
+            this.picturetest = new PictureTest();
+            this.picturetest.setVisible(true);
+        }
     }
 }
 
