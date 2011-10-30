@@ -7,7 +7,7 @@ public class PictureTest extends Test{
 
 
     public String getPath() {
-        return this.path + this.imagepath;
+        return this.path + "/" + this.imagepath;
     }
 
     public void setVisible(boolean b) {
